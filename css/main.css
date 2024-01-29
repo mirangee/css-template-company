@@ -72,7 +72,7 @@ header .inner-header .gnb li a {
 }
 
 header .inner-header .gnb li a:hover {
-  color: orange;
+  color: #ff8342;
 }
 
 /* nav 태그 지목해서 gnb, tnb 글자를 한번에 지목 */
@@ -216,7 +216,7 @@ section .title p {
   color: #555;
 }
 
-section .subcontainer {
+section .sub-container {
   width: 74%;
   margin: 0 auto;
 }
@@ -227,47 +227,47 @@ section.about {
   margin: 80px 0;
 }
 
-section.about .subcontainer {
+section.about .sub-container {
   margin-top: 30px;
   border-bottom: 1px solid #ddd;
   padding-bottom: 30px;
 }
 
-section.about .subcontainer li {
+section.about .sub-container li {
   width: 33.3333%;
   box-sizing: border-box;
   float: left;
   height: 510px;
 }
 
-section.about .subcontainer li .img-box {
+section.about .sub-container li .img-box {
   overflow: hidden;
 }
 
-section.about .subcontainer li .img-box img {
+section.about .sub-container li .img-box img {
   width: 100%;
   transition: 0.6s;
 }
 
-section.about .subcontainer li a:hover .img-box img {
+section.about .sub-container li a:hover .img-box img {
   transform: scale(1.2);
 }
 
-section.about .subcontainer li a .text {
+section.about .sub-container li a .text {
   padding: 25px;
 }
 
-section.about .subcontainer li a .text h3 {
+section.about .sub-container li a .text h3 {
   font-size: 20px;
   margin-bottom: 10px;
 }
 
-section.about .subcontainer li a .text p {
+section.about .sub-container li a .text p {
   font-size: 16px;
   margin-bottom: 20px;
 }
 
-section.about .subcontainer li a .text p.more {
+section.about .sub-container li a .text p.more {
   /* 일괄 대소문자 변경(소문자는 lowercase) */
   text-transform: uppercase;
   font-weight: 700;
@@ -276,16 +276,301 @@ section.about .subcontainer li a .text p.more {
   padding-left: 35px;
 }
 
-section.about .subcontainer li a .text p.more::before {
+section.about .sub-container li a .text p.more::before {
   content: '→';
   display: block;
   width: 30px;
   height: 30px;
-  background-color: orange;
+  background-color: #ff8342;
   border-radius: 50%;
   line-height: 30px;
 
   position: absolute;
   top: -7px;
   left: 0;
+}
+
+/* section.innovation style */
+section.innovation {
+  margin-bottom: 150px;
+}
+
+section.innovation .img-box {
+  margin-top: 50px;
+  height: 540px;
+  background-image: url(../img/product_1.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+section.innovation .img-box .inner {
+  background-color: #3a3c4e;
+  width: 80%;
+  color: #fff;
+
+  position: absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+section.innovation .img-box .inner h3 {
+  background-color: #fff;
+  color: #222;
+  font-size: 18px;
+  padding: 25px 45px;
+  box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom {
+  padding: 35px 85px;
+  box-sizing: border-box;
+}
+
+section.innovation .img-box .inner .bottom p {
+  float: left;
+  width: 70%;
+  line-height: 1.6;
+}
+
+section.innovation .img-box .inner .bottom a {
+  background-color: #ff8342;
+  /* display: block;  -> float 사용할 거면 굳이 직접 바꿀 필요 없음. 자동으로 변환환*/
+  float: right;
+  padding: 7px 30px;
+  border-radius: 50px;
+}
+
+section.innovation .img-box .inner .bottom a:hover {
+  background-color: #f86010;
+}
+
+/* section.me style */
+section.me {
+  background: url(../img/me.jpg) no-repeat center / cover;
+  padding: 80px 0;
+  margin-bottom: 150px;
+}
+
+section.me ul.list {
+  margin-top: 50px;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+}
+
+section.me ul.list > li {
+  padding: 30px 60px;
+}
+
+section.me ul.list > li:first-child {
+  border-bottom: 1px solid #ddd;
+}
+
+section.me ul.list > li h3 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+section.me ul.list > li h3 span {
+  position: absolute;
+  left: -30px;
+  color: #ff8342;
+} 
+
+section.me ul.list > li p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+section.me ul.list > li .more {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+section.me ul.list > li .more span {
+  color: #ff8342;
+  margin-left: 3px;
+  font-size: 14px;
+}
+
+section.me ul.list ul.in {
+  margin-bottom: 30px;
+}
+
+section.me ul.list ul.in li em {
+  float: left;
+  /* float이나 position이 적용되면
+  자동으로 인라인요소가 블록요소화 된다. */
+  font-weight: bold;
+  width: 12%;
+}
+
+section.me ul.list ul.in li p {
+  float: left;
+  position: relative;
+}
+
+section.me ul.list ul.in li p::before {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #ff8342;
+  position: absolute;
+  left: -35px;
+  top: 4px;
+}
+
+#incruit-btn {
+  display: block;
+  /* button은 인라인 요소이기 때문에
+  가로, 세로값을 주려면 display block 줘야 함 */
+  width: 280px;
+  background-color: #ff8342;
+  color: #fff;
+  margin: 20px auto 0;
+  font-weight: bold;
+  border-radius: 50px;
+  padding: 10px 0;
+  cursor: pointer;
+}
+
+/* section.sns style */
+section.sns {
+  margin-bottom: 60px;
+}
+
+section.sns ul {
+  margin: 50px auto;
+}
+
+section.sns ul li {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+}
+
+section.sns ul li:last-child {
+  margin-right: 0;
+}
+
+section.sns ul li a .img-box {
+  max-height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.sns ul li a .img-box img {
+  width: 100%;
+}
+
+/* 'BLOG' pop-up */
+section.sns ul li a .img-box::before {
+  content: 'BLOG';
+  font-size: 15px;
+  font-family: 'EXO 2', sans-serif;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  color: #fff;
+  padding: 10px 30px;  
+ 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+section.sns ul li a:hover .img-box::before {
+  opacity: 1;
+}
+
+/* orange background fill-up */
+section.sns ul li a .img-box::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 112, 46, 0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.6s;
+}
+
+section.sns ul li a:hover .img-box::after {
+  width: 100%;
+}
+
+section.sns ul li a .bottom {
+  margin: 20px;
+}
+
+section.sns ul li a .bottom p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+section.sns ul li a .bottom p.color {
+  font-size: 12px;
+  font-weight: bold;
+  color: #ff8342;
+}
+
+section.sns ul li a .bottom p.time {
+  font-size: 10px;
+  color: #555;
+  margin-top: 10px;
+}
+
+section.sns ul li a .bottom p.time i {
+  font-size: 0.9em;
+  margin-right: 4px;
+}
+
+/* footer style */
+footer {
+  border-top: 1px solid #333;
+}
+
+footer .inner {
+  width: 84%;
+  height: 100px;
+  margin: 0 auto;
+}
+
+footer .inner .ft-logo {
+  float: left;
+  margin-top: 15px;
+}
+
+footer .inner .address {
+  font-size: 12px;
+  font-weight: 700;
+  float: left;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+footer .inner .address .en {
+  font-size: 12px;
+  font-weight: 400;
+  margin-top: 8px;
+  color: #333;
+}
+
+footer .inner .list {
+  float: right;
+}
+
+footer .inner .list li {
+  font-size: 12px;
+  font-weight: bold;
+  float: left;
+  margin: 30px 20px;
 }

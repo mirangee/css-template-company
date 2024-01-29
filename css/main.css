@@ -128,7 +128,6 @@ section.main {
 }
 
 section.main .main-title {
-  background-color: yellow;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -161,4 +160,132 @@ section.main .main-title {
     opacity: 1;
     top: 50%
   }
+}
+
+section.main .main-title h2 {
+  font-size: 55px;
+}
+
+section.main .main-title p {
+  font-size: 25px;
+  margin: 20px 0;
+}
+
+section.main .main-title .view {
+  font-size: 20px;
+  letter-spacing: 2px;
+  display: block;
+  width: 180px;
+  margin: 0 auto;
+  border: 3px solid #fff;
+  border-radius: 40px;
+  padding: 8px 0;
+
+  position: relative;
+  overflow: hidden;
+}
+
+section.main .main-title .view::after {
+  content: '';
+  width: 0;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+section.main .main-title .view:hover::after {
+  width: 100%;
+}
+
+/* section에 들어갈 디자인 일괄 지정 */
+section .title {
+  text-align: center;
+}
+
+section .title h2 {
+  font-size: 45px;
+  color: #111;
+  margin-bottom: 10px;
+}
+
+section .title p {
+  font-size: 18px;
+  color: #555;
+}
+
+section .subcontainer {
+  width: 74%;
+  margin: 0 auto;
+}
+
+
+/* section.about style */
+section.about {
+  margin: 80px 0;
+}
+
+section.about .subcontainer {
+  margin-top: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+}
+
+section.about .subcontainer li {
+  width: 33.3333%;
+  box-sizing: border-box;
+  float: left;
+  height: 510px;
+}
+
+section.about .subcontainer li .img-box {
+  overflow: hidden;
+}
+
+section.about .subcontainer li .img-box img {
+  width: 100%;
+  transition: 0.6s;
+}
+
+section.about .subcontainer li a:hover .img-box img {
+  transform: scale(1.2);
+}
+
+section.about .subcontainer li a .text {
+  padding: 25px;
+}
+
+section.about .subcontainer li a .text h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+section.about .subcontainer li a .text p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+section.about .subcontainer li a .text p.more {
+  /* 일괄 대소문자 변경(소문자는 lowercase) */
+  text-transform: uppercase;
+  font-weight: 700;
+
+  position: relative;
+  padding-left: 35px;
+}
+
+section.about .subcontainer li a .text p.more::before {
+  content: '→';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: orange;
+  border-radius: 50%;
+  line-height: 30px;
+
+  position: absolute;
+  top: -7px;
+  left: 0;
 }
